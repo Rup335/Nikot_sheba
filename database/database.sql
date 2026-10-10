@@ -1,7 +1,7 @@
--- ===========================================================
+
 --  Local Service Provider Directory  (ServiceHub)
 --  Import this file in phpMyAdmin  (Import tab)
--- ===========================================================
+
 
 CREATE DATABASE IF NOT EXISTS local_service_directory
     CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
@@ -77,9 +77,9 @@ CREATE TABLE reviews (
     FOREIGN KEY (provider_id) REFERENCES users(id)    ON DELETE CASCADE
 ) ENGINE=InnoDB;
 
--- ===========================================================
+
 --  Sample data   (admin password: admin123 | all others: 123456)
--- ===========================================================
+
 
 INSERT INTO categories (id, name, description) VALUES
 (1, 'Electrician', 'Wiring, fan and light fitting, electrical repair'),
