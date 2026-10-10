@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Service Profile | ServiceHub</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="navbar" id="navbar"></header>
+
+<main class="container">
+    <div id="alert-box"></div>
+    <div class="card form-card wide">
+        <h1>My service profile</h1>
+        <p class="muted">This information is shown to customers on the search and profile pages.</p>
+        <div id="status-note" style="margin-top:10px;"></div>
+        <form id="profile-form">
+            <div class="form-row">
+                <div><label>Service category</label><select id="category" required></select></div>
+                <div><label>Service area</label><input type="text" id="area" placeholder="e.g. Tangail Sadar" required></div>
+            </div>
+            <div class="form-row">
+                <div><label>Price per hour (৳)</label><input type="number" id="price" min="1" step="1" required></div>
+                <div><label>Experience (years)</label><input type="number" id="experience" min="0" step="1" required></div>
+            </div>
+            <label>About you</label>
+            <textarea id="bio" placeholder="Describe your skills and services"></textarea>
+            <button class="btn" type="submit">Save profile</button>
+        </form>
+        <p style="margin-top:14px;"><a href="provider-dashboard.html">&larr; Back to dashboard</a></p>
+    </div>
+</main>
+
+<footer class="footer" id="footer"></footer>
+<script src="js/app.js"></script>
+<script src="js/provider-profile.js"></script>
+</body>
+</html>

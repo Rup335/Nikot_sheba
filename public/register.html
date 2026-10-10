@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Register | ServiceHub</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="navbar" id="navbar"></header>
+
+<main class="container">
+    <div id="alert-box"></div>
+    <div class="card form-card wide">
+        <h1>Create an account</h1>
+        <form id="register-form">
+            <label>I want to</label>
+            <select id="role">
+                <option value="customer">Find and book services (Customer)</option>
+                <option value="provider">Offer my services (Provider)</option>
+            </select>
+
+            <div class="form-row">
+                <div><label>Full name</label><input type="text" id="name" required></div>
+                <div><label>Phone</label><input type="text" id="phone" placeholder="01XXXXXXXXX" required></div>
+            </div>
+            <label>Email</label>
+            <input type="email" id="email" required>
+            <div class="form-row">
+                <div><label>Password</label><input type="password" id="password" minlength="6" required></div>
+                <div><label>Confirm password</label><input type="password" id="confirm" minlength="6" required></div>
+            </div>
+
+            <div id="provider-fields" class="hidden">
+                <h3 style="margin-top:20px;">Service details</h3>
+                <div class="form-row">
+                    <div><label>Service category</label><select id="category"></select></div>
+                    <div><label>Service area</label><input type="text" id="area" placeholder="e.g. Tangail Sadar"></div>
+                </div>
+                <div class="form-row">
+                    <div><label>Price per hour (৳)</label><input type="number" id="price" min="1" step="1"></div>
+                    <div><label>Experience (years)</label><input type="number" id="experience" min="0" step="1"></div>
+                </div>
+                <label>About you</label>
+                <textarea id="bio" placeholder="Describe your skills and services"></textarea>
+                <p class="muted" style="margin-top:6px;">Your profile will be visible after admin approval.</p>
+            </div>
+
+            <button class="btn" type="submit">Register</button>
+        </form>
+        <p class="muted" style="margin-top:14px;">Already have an account? <a href="login.html">Login</a></p>
+    </div>
+</main>
+
+<footer class="footer" id="footer"></footer>
+<script src="js/app.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

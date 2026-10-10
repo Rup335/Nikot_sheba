@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Panel | ServiceHub</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="navbar" id="navbar"></header>
+
+<main class="container">
+    <div id="alert-box"></div>
+    <h1>Admin Panel</h1>
+    <div class="tabs" id="tabs">
+        <button class="tab-btn active" data-tab="overview">Overview</button>
+        <button class="tab-btn" data-tab="users">Users</button>
+        <button class="tab-btn" data-tab="providers">Providers</button>
+        <button class="tab-btn" data-tab="categories">Categories</button>
+        <button class="tab-btn" data-tab="reviews">Reviews</button>
+    </div>
+    <div id="panel"><div class="loading">Loading...</div></div>
+</main>
+
+<footer class="footer" id="footer"></footer>
+<script src="js/app.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

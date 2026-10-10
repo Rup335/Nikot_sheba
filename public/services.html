@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Find Services | ServiceHub</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="navbar" id="navbar"></header>
+
+<main class="container">
+    <div id="alert-box"></div>
+    <h1>Find Services</h1>
+    <p class="muted" style="margin-bottom:16px;">Search by name, service type and area.</p>
+
+    <form class="filter-form card" id="filter-form">
+        <div><label>Provider name</label><input type="text" id="f-q" placeholder="e.g. Rahim"></div>
+        <div><label>Service</label><select id="f-category"><option value="0">All services</option></select></div>
+        <div><label>Area</label><input type="text" id="f-area" placeholder="e.g. Santosh"></div>
+        <div>
+            <label>Sort by</label>
+            <select id="f-sort">
+                <option value="rating">Highest rated</option>
+                <option value="price_low">Price: low to high</option>
+                <option value="price_high">Price: high to low</option>
+                <option value="exp">Most experienced</option>
+            </select>
+        </div>
+        <div><button class="btn" type="submit">Search</button></div>
+    </form>
+
+    <p class="muted" id="result-count" style="margin-bottom:12px;"></p>
+    <div class="grid" id="results"><div class="loading">Loading...</div></div>
+</main>
+
+<footer class="footer" id="footer"></footer>
+<script src="js/app.js"></script>
+<script src="js/services.js"></script>
+</body>
+</html>
